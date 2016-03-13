@@ -4,4 +4,4 @@ node_js:
   - "4"
 sudo: false
 script:
-  - npm test
+  - npm test && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage
