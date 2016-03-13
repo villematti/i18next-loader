@@ -1,0 +1,23 @@
+{
+  "name": "i18next-loader",
+  "version": "0.0.1",
+  "description": "i18next loader module for webpack",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamilglod/eslisp-loader.git"
+  },
+  "keywords": [
+    "i18next",
+    "i18n",
+    "translate",
+    "webpack",
+    "loader"
+  ],
+  "author": "Kamil Głód @kglod",
+  "license": "MIT",
+  "dependencies": {
+    "i18next": "^2.3.4",
+    "loader-utils": "^0.2.11"
+  }
+}
