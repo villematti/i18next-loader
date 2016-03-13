@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/kamilglod/i18next-loader.svg?branch=master)](https://travis-ci.org/kamilglod/i18next-loader)
+[![Coverage Status](https://coveralls.io/repos/github/kamilglod/i18next-loader/badge.svg?branch=master)](https://coveralls.io/github/kamilglod/i18next-loader?branch=master)
 
 # i18next loader for webpack
 this is a webpack loader that can translate your code and generate bundle per each language
