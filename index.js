@@ -5,16 +5,18 @@
 
 var loaderUtils = require('loader-utils');
 var i18next = require('i18next');
+var clc = require('cli-color');
+
+
+i18next.on('missingKey', function(lngs, namespace, key, res) {
+  console.log(clc.yellow('[' + lngs + '] key `' + namespace + ':' + key + '` missing'));
+});
 
 
 module.exports = function(source) {
 	if (this.cacheable) {
     this.cacheable();
   }
-
-  i18next.on('missingKey', function(lngs, namespace, key, res) {
-    this.emitWarning('[' + lngs + '] key `' + namespace + ':' + key + '` missing');
-  }.bind(this));
 
   var params  = loaderUtils.parseQuery(this.query);
   var funcName = params.funcName || '__';

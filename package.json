@@ -17,6 +17,7 @@
   "author": "Kamil Głód @kglod",
   "license": "MIT",
   "dependencies": {
+    "cli-color": "^1.1.0",
     "i18next": "^2.3.4",
     "loader-utils": "^0.2.11"
   }
