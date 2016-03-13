@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kamilglod/eslisp-loader.git"
+    "url": "https://github.com/kamilglod/i18next-loader.git"
   },
   "keywords": [
     "i18next",
