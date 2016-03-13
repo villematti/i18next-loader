@@ -8,7 +8,7 @@ var i18next = require('i18next');
 var clc = require('cli-color');
 
 
-i18next.on('missingKey', function(lngs, namespace, key, res) {
+i18next.on('missingKey', function(lngs, namespace, key) {
   console.log(clc.yellow('[' + lngs + '] key `' + namespace + ':' + key + '` missing'));
 });
 

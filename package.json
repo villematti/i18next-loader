@@ -4,9 +4,10 @@
   "description": "i18next loader module for webpack",
   "main": "index.js",
   "scripts": {
-    "test": "mocha && npm run lint",
+    "test": "npm run coverage && npm run lint",
     "test:watch": "mocha --watch",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "coverage": "istanbul cover _mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^2.4.0",
+    "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3"
   }
