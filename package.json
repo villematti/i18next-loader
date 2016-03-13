@@ -1,6 +1,6 @@
 {
   "name": "i18next-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "i18next loader module for webpack",
   "main": "index.js",
   "repository": {
