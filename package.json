@@ -3,6 +3,11 @@
   "version": "0.0.3",
   "description": "i18next loader module for webpack",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha && npm run lint",
+    "test:watch": "mocha --watch",
+    "lint": "eslint ."
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kamilglod/i18next-loader.git"
@@ -20,5 +25,11 @@
     "cli-color": "^1.1.0",
     "i18next": "^2.3.4",
     "loader-utils": "^0.2.11"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.4.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3"
   }
 }
