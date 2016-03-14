@@ -90,4 +90,34 @@ describe('loader', function () {
     expect(obj.cacheable.called).to.be.equal(true);
   });
 
+  it('json_with_number', function () {
+    var source = loader("__('asd', {a: 1})");
+
+    expect(source).to.be.eql('\'key\'');
+    expect(this.stubT.args[0]).to.be.eql(['asd', {a: '1'}]);
+  });
+
+  it('json_with_string', function () {
+    var source = loader("__('asd', {a: 'test'})");
+
+    expect(source).to.be.eql('\'key\'');
+    expect(this.stubT.args[0]).to.be.eql(['asd', {a: 'test'}]);
+  });
+
+  it('json_with_multiple_elements', function () {
+    var source = loader("__('asd', {a: 'test', b: 'work'})");
+
+    expect(source).to.be.eql('\'key\'');
+    expect(this.stubT.args[0])
+      .to.be.eql(['asd', {a: 'test', b: 'work'}]);
+  });
+
+  it('json_with_escaped_keys', function () {
+    var source = loader("__('asd', {'test': 'work'})");
+
+    expect(source).to.be.eql('\'key\'');
+    expect(this.stubT.args[0])
+      .to.be.eql(['asd', {'test': 'work'}]);
+  });
+
 });

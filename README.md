@@ -20,7 +20,14 @@ this is a webpack loader that can translate your code and generate bundle per ea
     nsSeparator: false,
     saveMissing: true,
     resources: {
-      'Hello World!': 'Siema Świecie!'
+      'Hello World!': 'Siema Świecie!',
+      'Translate me!': 'Przetłumacz mnie',
+      'One plus one equals ${ 1 + 1 }': 'Jeden plus jeden jest równe ${ 1 + 1 }',
+      'key_0': 'elementów',
+      'key_1': 'element',
+      'key_2': 'elementy',
+      'key_5': 'elementów',
+      'key_21': 'elementy'
     }
   });
   ```
@@ -35,6 +42,14 @@ this is a webpack loader that can translate your code and generate bundle per ea
       test: /\.(js|jsx)$/,
       loader: 'i18next-loader!react-hot!babel-loader'
   }
+  ```
+4. Then you can use translate function, e.g:
+  ```js
+  __('Translate me!')   // 'Przetłumacz mnie'
+  __(`One plus one equals ${ 1 + 1 }`)  // 'Jeden plus jest jest równe ${ 1 + 1 }'
+  __('item', {count: 0})  // 'elementów'
+  __('item', {count: 1})  // 'element'
+  __('item', {count: 99})  // 'elementów'
   ```
 
 ### query params:
