@@ -45,6 +45,7 @@ this is a webpack loader that can translate your code and generate bundle per ea
   ```
 4. Then you can use translate function, e.g:
   ```js
+
   __('Translate me!')   // 'Przetłumacz mnie'
   __(`One plus one equals ${ 1 + 1 }`)  // 'Jeden plus jest jest równe ${ 1 + 1 }'
   __('item', {count: 0})  // 'elementów'
