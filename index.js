@@ -20,10 +20,11 @@ module.exports = function(source) {
 
   var params  = loaderUtils.parseQuery(this.query);
   var funcName = params.funcName || '__';
-  var quotes = params.quotes || '\'';
-  var regex = new RegExp(funcName + '\\([\'"`](.*?)[\'"`]\\)', ['g']);
+  var defaultQuotes = params.quotes || '\'';
+  var regex = new RegExp(funcName + '\\(([\'"`])(.*?)[\'"`]\\)', ['g']);
 
-  source = source.replace(regex, function (res, key) {
+  source = source.replace(regex, function (res, quotes, key) {
+    quotes = (quotes == '`') ? '`' : defaultQuotes;
     return quotes + i18next.t(key) + quotes;
   });
 

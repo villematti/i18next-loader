@@ -61,10 +61,12 @@ describe('loader', function () {
   });
 
   it('template_string', function () {
-    var source = loader('__(`asd ${ 1 + 1 }`)');
+    this.stubT.returns('Wynik to ${ 1 + 1 }');
 
-    expect(source).to.be.eql('\'key\'');
-    expect(this.stubT.args[0][0]).to.be.eql('asd ${ 1 + 1 }');
+    var source = loader('__(`Sum is ${ 1 + 1 }`) rest of code...');
+
+    expect(source).to.be.eql('`Wynik to ${ 1 + 1 }` rest of code...');
+    expect(this.stubT.args[0][0]).to.be.eql('Sum is ${ 1 + 1 }');
   });
 
   it('log_warning', function () {
