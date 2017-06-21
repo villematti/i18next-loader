@@ -14,7 +14,7 @@ this is a webpack loader that can translate your code and generate bundle per ea
 1. install `i18next1`: `npm install --save-dev i18next`
 2. call `i18next.init({})` in the begining of your `webpack.config.js`:
   ```js
-  var i18next = require('i18next-loader/node_modules/i18next');
+  var i18next = require('i18next');
 
   i18next.init({
     lng: 'pl',
